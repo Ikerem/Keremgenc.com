@@ -1,0 +1,19 @@
+﻿@model EntityLayer.Concrete.Home
+@{
+    ViewData["Title"] = "EditHomePage";
+    Layout = "~/Views/Shared/_AdminLayaout.cshtml";
+}
+
+@using (Html.BeginForm("EditHomePage", "HomePage", FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.Homdeid)
+    <br />
+    @Html.Label("1.Başlık")
+    @Html.TextBoxFor(x=>x.Title,new{@class="form-control"})
+    <br />
+    <label>2.Başlık</label>
+    @Html.TextAreaFor(x=>x.Description,10,3,new{@class="form-control"})
+    <br />
+    <button class="btn btn-gradient-success btn-rounded btn-fw">Güncelle</button>
+}
+

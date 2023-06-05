@@ -1,0 +1,37 @@
+﻿@model EntityLayer.Concrete.MyPricing
+@{
+    ViewData["Title"] = "AddMyPricing";
+    Layout = "~/Views/Shared/_AdminLayaout.cshtml";
+}
+
+<h4 class="table-info">Yeni Paket Ekleme Sayfası</h4>
+<br />
+<br />
+
+<form class=" form-group  " method="post">
+    <br />
+    @Html.Label("Yetenek Başlığı")
+    <input type="text" name="Title" class="form-control" />
+    <br />
+      @Html.Label("Fotoğraf")
+    <input type="text" name="ımg" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" name="descriptio2" class="form-control" />
+    <br />
+       <label>Açıklam2</label>
+    <input type="text" name="descriptio2" class="form-control" />
+    <br />
+       <label>Açıklama3</label>
+    <input type="text" name="descriptio3" class="form-control" />
+    <br />
+       <label>Açıklama4</label>
+    <input type="text" name="descriptio4" class="form-control" />
+    <br />
+       <label>Fiyat</label>
+    <input type="text" name="price" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+
+
+</form>

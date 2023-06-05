@@ -1,0 +1,40 @@
+﻿@model EntityLayer.Concrete.MyPricing
+@{
+    ViewData["Title"] = "EditPricing";
+    Layout = "~/Views/Shared/_AdminLayaout.cshtml";
+}
+
+@using (Html.BeginForm("EditPricing", "MyPricing", FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.MyPricingid)
+    <br />
+    @Html.Label("Paket Adı")
+    <br />
+    @Html.TextBoxFor(x=>x.title,new{@class="form-control"})
+    <br />
+    <label>Açıklama1</label>
+    <br />
+    @Html.TextBoxFor(x=>x.ımg ,new{@class="form-control"})
+    <br />
+    <label>Açıklama1</label>
+    <br />
+    @Html.TextBoxFor(x=>x.description ,new{@class="form-control"})
+    <br />
+    <label>Açıklama2</label>
+    <br />
+    @Html.TextAreaFor(x=>x.descriptio2,new{@class="form-control"})
+    <br />
+    <label>Açıklama3</label>
+    <br />
+    @Html.TextAreaFor(x=>x.descriptio3,new{@class="form-control"})
+    <br />
+    <label>Açıklama4</label>
+    <br />
+    @Html.TextAreaFor(x=>x.descriptio4,new{@class="form-control"})
+    <br />
+    @Html.Label("Fiyat")
+    <br />
+    @Html.TextBoxFor(x=>x.price,new{@class="form-control"})
+    <br />
+    <button class="btn btn-gradient-success btn-rounded btn-fw">Güncelle</button>
+}

@@ -1,0 +1,28 @@
+﻿@model EntityLayer.Concrete.Projects
+@{
+    ViewData["Title"] = "AddPortfolio";
+    Layout = "~/Views/Shared/_AdminLayaout.cshtml";
+}
+
+
+<h4 class="table-info">Yeni Proje Ekleme Sayfası</h4>
+<br />
+<br />
+
+<form class=" form-group  " method="post">
+    <br />
+    @Html.Label("Fotoğraf")
+    <input type="text" name="Imge" class="form-control" />
+    <br />
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control" />
+    <br />
+    <label>Başlık</label>
+    <input type="text" name="description" class="form-control" />
+    <br />
+    <button class="btn btn-inverse-info btn-fw">Kaydet</button>
+
+
+</form>
+
+

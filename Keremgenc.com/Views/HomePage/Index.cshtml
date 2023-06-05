@@ -1,0 +1,52 @@
+﻿@model List<Home>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayaout.cshtml";
+    int count = 0;
+}
+
+<div class="col-lg-12 stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Home Sayfası</h4>
+            <p class="card-description">
+                Merhaba, <code>bu Sayafa da Home sayafasındaki yazıları değiştireblir,güncelleyebilir veya sile bilirsniz.</code>
+            </p>
+            <table class="table table-bordered">
+
+                <thead>
+                    <tr>
+                        <th> # </th>
+                        <th> 1. Başlık </th>
+                        <th> 2. Başlık </th>
+                     
+                        <th> Düzenle </th>
+                        
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+                    count++;
+
+                    <tbody>
+                        <tr>
+                            <td> @count </td>
+                            <td> @item.Title </td>
+                            <td> @item.Description.Substring(0, Math.Min(30, item.Description.Length))  </td>
+                           
+                            <td> <a href="/HomePage/EditHomePage/@item.Homdeid" class="btn btn-inverse-success btn-fw">Düzenle</a> </td>
+                         
+                        </tr>
+
+                    </tbody>
+                }
+            </table>
+            <br />
+       
+
+        </div>
+    </div>
+</div>
+
+
+

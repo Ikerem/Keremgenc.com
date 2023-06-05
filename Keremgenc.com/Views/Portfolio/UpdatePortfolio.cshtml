@@ -1,0 +1,24 @@
+﻿@model EntityLayer.Concrete.Projects
+@{
+    ViewData["Title"] = "UpdatePortfolio";
+    Layout = "~/Views/Shared/_AdminLayaout.cshtml";
+}
+@using (Html.BeginForm("UpdatePortfolio", "Portfolio", FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.Projectid)
+    <br />
+    @Html.Label("Fotoğraf")
+    @Html.TextBoxFor(x=>x.Imge,  new{@class="form-control"})
+    <br />
+    <br />
+    @Html.Label("1.Başlık")
+    @Html.TextBoxFor(x=>x.Title,new{@class="form-control"})
+    <br />
+    <label>2.Başlık</label>
+    @Html.TextAreaFor(x=>x.description,10,3,new{@class="form-control"})
+    <br />
+    <button class="btn btn-inverse-info btn-fw">Güncelle</button>
+}
+
+
+
